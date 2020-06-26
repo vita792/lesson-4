@@ -14,8 +14,21 @@ public class Validator {
         pattern = Pattern.compile(EMAIL_PATTERN);
     }
 
-    public boolean validate(final String email) {
+    public boolean validateEmail(final String email) {
         matcher = pattern.matcher(email);
+
+        return matcher.matches();
+    }
+    
+    private static final String TOWN_PATTERN =
+            "A-Za-z";
+
+    public void ValidatorTown() {
+        pattern = Pattern.compile(TOWN_PATTERN); 
+    }
+
+    public boolean validateTown(final String town) {
+        matcher = pattern.matcher(town);
 
         return matcher.matches();
     }
