@@ -6,11 +6,14 @@ public class Main {
 
     public static void main(String[] args) {
         User newUser = new User();
-        Validator validatorEmail = new Validator()
-        Validator validatorTown = new Validator()
+        Validator validatorEmail = new Validator();
+        Validator validatorTown = new Validator();
 
-        newUser.UserName();
-        newUser.Email();
-        newUser.Town();
+        String userName = newUser.UserName();
+        String userEmail = newUser.Email();
+        String userTown = newUser.Town();
+        
+        validatorEmail.ValidatorEmail(userEmail);
+        validatorTown.ValidatorTown(userTown);
     }
 }
