@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         User newUser = new User();
         Validator validatorEmail = new Validator()
+        Validator validatorTown = new Validator()
 
         newUser.UserName();
         newUser.Email();
