@@ -13,7 +13,16 @@ public class Main {
         String userEmail = newUser.Email();
         String userTown = newUser.Town();
         
-        validatorEmail.ValidatorEmail(userEmail);
-        validatorTown.ValidatorTown(userTown);
+        String validEmail = validatorEmail.ValidatorEmail(userEmail);
+        String validTown = validatorTown.ValidatorTown(userTown);
+        
+        
+        String formatName = String.format("User name is %s", userName);  
+        String formatEmail = String.format("User`s email is %s", validEmail);  
+        String formatTown = String.format("User`s town is %s", validTown);
+        
+        System.out.println(formatName);  
+        System.out.println(formatEmail);  
+        System.out.println(formatTown);  
     }
 }
